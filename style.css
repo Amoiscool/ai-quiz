@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   Container
+========================= */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =========================
+   Header
+========================= */
+.header {
+  border-bottom: 1px solid #ddd;
+  padding: 16px 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: black;
+}
+
+/* Mobile Header */
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav a {
+    margin: 6px 0;
+  }
+}
+
+/* =========================
+   Hero Section
+========================= */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  gap: 20px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-card {
+  width: 240px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+/* Mobile Hero */
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-card {
+    width: 100%;
+  }
+}
+
+/* =========================
+   Grid Section
+========================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 20px 0 40px 0;
+}
+
+/* Tablet */
+@media (max-width: 900px) and (min-width: 601px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 18px;
+  transition: 0.2s ease;
+}
+
+/* =========================
+   Button + Hover Styles
+========================= */
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid black;
+  text-decoration: none;
+  color: black;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  background: black;
+  color: white;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   Footer
+========================= */
+.footer {
+  padding: 16px 0;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
